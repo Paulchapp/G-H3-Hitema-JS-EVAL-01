@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function unionTab(tab1,tab2){
+            let tab3=tab1.filter((item,index)=>tab1.indexOf(item)==index);
+
+            if (tab1.length==0){
+                return tab2;
+            }
+            if (tab2.length===0){
+                return tab1;
+            }
+            for (let elem of tab2){
+                if(!tab1.includes(elem)){
+                    tab3.push(elem);
+                }
+            }
+            return tab3;    
+        }
+
+        console.log(unionTab(['a','b'],['c','d']));
+        console.log(unionTab(['a','b'],['a','d']));
+        console.log(unionTab(['a','b','a'],['a','d','b','a']));
+    </script>
+</body>
+</html>

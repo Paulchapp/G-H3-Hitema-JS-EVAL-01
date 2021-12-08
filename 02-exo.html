@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+function searchlettres(param1,param2){
+            let cpt=0;
+            let param2min=param2; 
+            if (param1.length==0){
+                return 0;
+            }
+            else{
+                if (param2==param2.toUpperCase()){
+                    param2min=param2.toLowerCase();
+                }
+                for(let i=0;i<param1.length;i++){
+                    if (param1[i]==param2min){
+                        cpt++;
+                    }
+                }
+            }
+            return cpt;
+        }
+
+        console.log(searchlettres('bonjour','o'));
+        console.log(searchlettres('bonjour','O'));
+        console.log(searchlettres('hello les amis','o'));
+        console.log(searchlettres('hello les amis','z'));
+
+</script>
+
+</body>
+</html>
